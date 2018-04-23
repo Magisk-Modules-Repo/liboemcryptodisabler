@@ -2,7 +2,7 @@
 
 ## Description
 
-Apps that use `liboemcrypto.so` for DRM, such as Netflix and My5, will fail during playback on rooted devices. This module masks `liboemcrypto.so` with a zero byte replacement.
+Apps that use `liboemcrypto.so` for DRM, such as Netflix and My5, will fail during playback on rooted devices. This Magisk module masks `liboemcrypto.so` with a zero byte replacement.
 
 ## Changelog
 
