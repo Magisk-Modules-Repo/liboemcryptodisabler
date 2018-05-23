@@ -12,7 +12,7 @@ A. You can, but then you will have a modified `/system` partition. The beauty of
 
 ## Changelog
 
-2018-04-23: v1
+2018-04-23: v1.0
 
 ## Requirements
 - The module assumes the library in question is located at `/system/lib/liboemcrypto.so`. If your library is located elsewhere (or nowhere), the module will have no effect (so it's harmless to try it).
