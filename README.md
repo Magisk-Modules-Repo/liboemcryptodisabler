@@ -20,4 +20,4 @@ A. You can, but then you will have a modified `/system` partition. The beauty of
 - The module has been verified working on a Samsung Galaxy S9+ (SM-G965F/DS) running Magisk 16.x on a variery of ROMs.
 
 ## Links
-[Module's XDA Forum Thread](https://forum.xda-developers.com/apps/magisk/magisk-liboemcrypto-disabler-drm-t3794393)
+[Module's XDA forum thread](https://forum.xda-developers.com/apps/magisk/magisk-liboemcrypto-disabler-drm-t3794393)
