@@ -14,10 +14,16 @@ A. You can, but then you will have a modified `/system` partition. The beauty of
 
 2018-04-23: v1.0
 
-## Requirements
-- The module assumes the library in question is located at `/system/lib/liboemcrypto.so`. If your library is located elsewhere (or nowhere), the module will have no effect (so it's harmless to try it).
+- Initial release.
 
-- The module has been verified working on a Samsung Galaxy S9+ (SM-G965F/DS) running Magisk 16.x on a variery of ROMs.
+2018-05-29: v1.1
+
+- Add support for devices that have the library under `/system/vendor/lib` instead.
+
+## Requirements
+- The module assumes the library in question is located at either `/system/lib/liboemcrypto.so` or `/system/vendor/lib/liboemcrypto.so`. If your library is located elsewhere (or nowhere), the module will have no effect (so it's harmless to try it).
+
+- The module has been verified working on a Samsung Galaxy S9+ (SM-G965F/DS) running Magisk 16.x on a variery of ROMs, and on a Samsung Tab S3 (SM-T820) running stock Android 8.0 and Magisk 16.x.
 
 ## Links
 [Module's XDA forum thread](https://forum.xda-developers.com/apps/magisk/magisk-liboemcrypto-disabler-drm-t3794393)

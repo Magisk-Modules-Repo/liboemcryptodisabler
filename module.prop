@@ -1,7 +1,7 @@
 id=liboemcryptodisabler
 name=liboemcrypto disabler
-version=v1
-versionCode=1
+version=v1.1
+versionCode=11
 author=ianmacd
 description=Disables liboemcrypto.so on rooted devices to allow DRM-protected content to play (e.g. Netflix, My5, etc.).
 minMagisk=1500
