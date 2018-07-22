@@ -12,13 +12,17 @@ A. You can, but then you will have a modified `/system` partition. The beauty of
 
 ## Changelog
 
-2018-04-23: v1.0
+2018-07-22: v1.2
 
-- Initial release.
+- Add logic to install in only the relevant library directory, rather than installing in both.
 
 2018-05-29: v1.1
 
-- Add support for devices that have the library under `/system/vendor/lib` instead.
+- Add support for devices that have the library under `/system/vendor/lib` instead of `/system/lib`.
+
+2018-04-23: v1.0
+
+- Initial release.
 
 ## Requirements
 - The module assumes the library in question is located at either `/system/lib/liboemcrypto.so` or `/system/vendor/lib/liboemcrypto.so`. If your library is located elsewhere (or nowhere), the module will have no effect (so it's harmless to try it).

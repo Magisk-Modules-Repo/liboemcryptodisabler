@@ -98,3 +98,18 @@ set_permissions() {
   # set_perm  $MODPATH/system/bin/dex2oat         0       2000    0755         u:object_r:dex2oat_exec:s0
   # set_perm  $MODPATH/system/lib/libart.so       0       0       0644
 }
+
+mask_lib(){
+  if [ -s /sbin/.core/mirror/system/lib/liboemcrypto.so ]; then
+    ui_print "- Installing to /system/lib/liboemcrypto.so"
+  else
+    rm -rf $MODPATH/system/lib
+  fi
+
+  if [ -s /sbin/.core/mirror/system/vendor/lib/liboemcrypto.so ]; then
+    ui_print "- Installing to /system/vendor/lib/liboemcrypto.so"
+  else
+    rm -rf $MODPATH/system/vendor
+  fi
+}
+
