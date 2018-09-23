@@ -10,11 +10,13 @@ Q. Can't I just delete or rename `liboemcrypto.so` to achieve the same effect?
 
 A. You can, but then you will have a modified `/system` partition. The beauty of using a Magisk module is that no actual changes are made to your file system.
 
+Q. 
+
 ## Changelog
 
 2018-07-22: v1.2
 
-- Add logic to install in only the relevant library directory, rather than installing in both.
+- Add logic to install only to the library directory actually used by the device, rather than installing to both commonly used directories.
 
 2018-05-29: v1.1
 
@@ -27,7 +29,7 @@ A. You can, but then you will have a modified `/system` partition. The beauty of
 ## Requirements
 - The module assumes the library in question is located at either `/system/lib/liboemcrypto.so` or `/system/vendor/lib/liboemcrypto.so`. If your library is located elsewhere (or nowhere), the module will have no effect (so it's harmless to try it).
 
-- The module has been verified working on a Samsung Galaxy S9+ (SM-G965F/DS) running Magisk 16.x on a variery of ROMs, and on a Samsung Tab S3 (SM-T820) running stock Android 8.0 and Magisk 16.x.
+- The module has been verified working on a Samsung Galaxy S9+ (SM-G965F/DS) running Magisk 16.x/17.x on a variery of ROMs, on a Samsung Tab S3 (SM-T820) running stock Android 8.0 and Magisk 16.x/17.x, and on a Samsung Tab S4 (SM-T839) running stock Android 8.1 and Magisk 17.x.
 
 ## Links
 [Module's XDA forum thread](https://forum.xda-developers.com/apps/magisk/magisk-liboemcrypto-disabler-drm-t3794393)
