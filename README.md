@@ -16,6 +16,12 @@ A consequence of using this module is that Widevine DRM will fall back to using 
 
 ## Changelog
 
+2018-12-06: v1.3
+
+- Add support for devices that have the library under either `/system/lib64` or `/system/vendor/lib64`.
+
+- Add support for devices that have the library in multiple locations.
+
 2018-07-22: v1.2
 
 - Add logic to install only to the library directory actually used by the device, rather than installing to both commonly used directories.
@@ -29,9 +35,9 @@ A consequence of using this module is that Widevine DRM will fall back to using 
 - Initial release.
 
 ## Requirements
-- The module assumes the library in question is located at either `/system/lib/liboemcrypto.so` or `/system/vendor/lib/liboemcrypto.so`. If your library is located elsewhere (or nowhere), the module will have no effect (so it's harmless to try it).
+- The module expects the library in question to be located at one or more of `/{system,vendor}/lib{,64}/liboemcrypto.so`. If your library is located elsewhere (or nowhere), the module will have no effect (so it's harmless to try it).
 
-- The module has been verified working on a Samsung Galaxy S9+ (SM-G965F/DS) running Magisk 16.x/17.x on a variery of ROMs, on a Samsung Tab S3 (SM-T820) running stock Android 8.0 and Magisk 16.x/17.x, and on a Samsung Tab S4 (SM-T830) running stock Android 8.1 and Magisk 17.x.
+- The module has been verified working on a multitude of devices, including a Samsung Galaxy S9+ (SM-G965F/DS) running Magisk 16.x/17.x on a variery of ROMs, a Samsung Tab S3 (SM-T820) running stock Android 8.0 and Magisk 16.x/17.x, and a Samsung Tab S4 (SM-T830) running stock Android 8.1 and Magisk 17.x.
 
 ## Links
 [Module's XDA forum thread](https://forum.xda-developers.com/apps/magisk/magisk-liboemcrypto-disabler-drm-t3794393)

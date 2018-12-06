@@ -99,17 +99,33 @@ set_permissions() {
   # set_perm  $MODPATH/system/lib/libart.so       0       0       0644
 }
 
-mask_lib(){
-  if [ -s /sbin/.core/mirror/system/lib/liboemcrypto.so ]; then
-    ui_print "- Installing to /system/lib/liboemcrypto.so"
+mask_lib() {
+  if [ -d /sbin/.magisk ]; then
+    local mirror=/sbin/.magisk/mirror
   else
-    rm -rf $MODPATH/system/lib
+    # Legacy /sbin/.core
+    #
+    local mirror=/sbin/.core/mirror
   fi
+  ui_print "- Magisk mirror found at $mirror."
 
-  if [ -s /sbin/.core/mirror/system/vendor/lib/liboemcrypto.so ]; then
-    ui_print "- Installing to /system/vendor/lib/liboemcrypto.so"
-  else
-    rm -rf $MODPATH/system/vendor
-  fi
+  local so=liboemcrypto.so
+
+  for part in system vendor; do
+    for libdir in lib lib64; do
+      if [ -s $mirror/$part/$libdir/$so ]; then
+	size=$(ls -l $mirror/$part/$libdir/$so | awk '{print $5}')
+        ui_print "- Found /$part/$libdir/$so, which is $size bytes."
+        ui_print "-   Neutralising..."
+	if [ $part = vendor ]; then
+	  instdir=system/vendor
+	else
+	  instdir=$part
+	fi
+
+	mkdir -p $MODPATH/$instdir/$libdir 2>/dev/null
+	touch $MODPATH/$instdir/$libdir/$so
+      fi
+    done
+  done
 }
-
