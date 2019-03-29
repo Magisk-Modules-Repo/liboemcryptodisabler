@@ -2,19 +2,28 @@
 
 ## Description
 
-Apps that use `liboemcrypto.so` to play content protected by DRM, such as Netflix and My5, will fail when playback is attempted on a rooted device. This Magisk module masks `liboemcrypto.so` with a zero byte replacement.
+Apps that use `liboemcrypto.so` to play content protected by DRM, such as Netflix and My5, will fail when playback is attempted on most rooted Samsung devices. This Magisk module masks `liboemcrypto.so` with a zero byte replacement.
 
 ## FAQ
 
 Q. Can't I just delete or rename `liboemcrypto.so` to achieve the same effect?
 
-A. You can, but then you will have a modified `/system` partition. The beauty of using a Magisk module is that no actual changes are made to your file system.
+A. You can, but then you will no longer have a pristine `/system` partition. The beauty of using a Magisk module is that no actual changes are made to your file system.
+
+Q. You say "most rooted Samsung devices" cannot play DRM-protected content without this module, but which ones can and therefore do not need it?
+
+A. The rooted S10+ (G975F) appears to be unaffected by `liboemcrypto.so` and therefore doesn't need this module. Nor, presumably, do the S10e (G970F) and S10 (G973F). A warning will be issued if the user installs the module on one of these devices.
 
 ## Problems
 
 A consequence of using this module is that Widevine DRM will fall back to using L3 instead of L1, which means that Netflix will not display content in HD or higher quality, regardless of your subscription type. Of course, without this module, Netflix will not play **at all** on a rooted device. If this is important to you, you will need to unroot your device.
 
 ## Changelog
+
+2019-03-29: v1.4
+
+- Updated for Magisk v19 template format.
+- Issue a warning if installed on an S10e (G970F), S10 (G973F) or S10+ (G975F).
 
 2018-12-06: v1.3
 
