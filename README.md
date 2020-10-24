@@ -22,7 +22,7 @@ A consequence of using this module is that Widevine DRM will fall back to using 
 
 2020-10-23: v1.5
 
-- Updated for Magisk v21 template format.
+- Updated for Magisk v21.0 template format.
 
 2019-03-29: v1.4
 
@@ -52,5 +52,6 @@ A consequence of using this module is that Widevine DRM will fall back to using 
 
 - The module has been verified working on a multitude of devices, including a Samsung Galaxy S9+ (SM-G965F/DS) running Magisk 16.x/17.x on a variery of ROMs, a Samsung Tab S3 (SM-T820) running stock Android 8.0 and Magisk 16.x/17.x, and a Samsung Tab S4 (SM-T830) running stock Android 8.1 and Magisk 17.x.
 
+- The module has been verified working on a OnePlus 5 with Android 11 using Magisk v21.0.
 ## Links
 [Module's XDA forum thread](https://forum.xda-developers.com/apps/magisk/magisk-liboemcrypto-disabler-drm-t3794393)
