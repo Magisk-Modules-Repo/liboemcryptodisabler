@@ -175,7 +175,9 @@ mask_lib() {
 
   # Real /system can be found here.
   #
-  local mirror=/sbin/.magisk/mirror
+  MAGISKPATH=$(magisk --path)
+
+  local mirror=/$MAGISKPATH/.magisk/mirror
   local so=liboemcrypto.so
 
   for part in system vendor; do
