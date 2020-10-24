@@ -20,6 +20,10 @@ A consequence of using this module is that Widevine DRM will fall back to using 
 
 ## Changelog
 
+2020-10-23: v1.5
+
+- Updated for Magisk v21 template format.
+
 2019-03-29: v1.4
 
 - Updated for Magisk v19 template format.
